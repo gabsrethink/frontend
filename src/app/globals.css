@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Cores */
+  --color-red-500: #fc4747;
+  --color-blue-950: #10141e;
+  --color-blue-900: #161d2f;
+  --color-blue-500: #5a698f;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --font-family-sans: "Outfit", "sans-serif";
+
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-700: 56px;
+  --spacing-900: 72px;
+  --spacing-1000: 80px;
+
+  --font-size-heading-lg: 32px;
+  --font-weight-heading-lg: 300;
+  --letter-spacing-heading-lg: -0.5px;
+
+  --font-size-heading-md: 24px;
+  --font-weight-heading-md: 500;
+
+  --font-size-heading-sm: 20px;
+  --font-weight-heading-sm: 300;
+
+  --font-size-body-md: 16px;
+  --font-weight-body-md: 300;
+
+  --font-size-body-sm: 15px;
+  --font-weight-body-sm: 500;
+
+  --font-size-body-xs: 14px;
+  --font-weight-body-xs: 500;
+
+  --font-size-body-xxs: 12px;
+  --font-weight-body-xxs: 300;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-blue-950);
+    color: var(--color-white);
+    font-family: var(--font-family-sans);
+  }
+}
+
+@layer utilities {
+  .text-heading-lg {
+    font-size: var(--font-size-heading-lg);
+    font-weight: var(--font-weight-heading-lg);
+    letter-spacing: var(--letter-spacing-heading-lg);
+  }
+  .text-heading-md {
+    font-size: var(--font-size-heading-md);
+    font-weight: var(--font-weight-heading-md);
+  }
+  .text-heading-sm {
+    font-size: var(--font-size-heading-sm);
+    font-weight: var(--font-weight-heading-sm);
+  }
+  .text-body-md {
+    font-size: var(--font-size-body-md);
+    font-weight: var(--font-weight-body-md);
+  }
+  .text-body-sm {
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-body-sm);
+  }
+  .text-body-xs {
+    font-size: var(--font-size-body-xs);
+    font-weight: var(--font-weight-body-xs);
+  }
+  .text-body-xxs {
+    font-size: var(--font-size-body-xxs);
+    font-weight: var(--font-weight-body-xxs);
+  }
+
+  .input-custom {
+    width: 100%;
+    background-color: transparent;
+    border-bottom-width: 1px;
+    border-color: var(--color-blue-500);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-body-sm);
+    color: var(--color-white);
+    outline: none;
+  }
+  .input-custom::placeholder {
+    color: var(--color-white);
+    opacity: 0.75;
+  }
+  .input-custom:focus {
+    border-color: var(--color-white);
+  }
+
+  .search-input {
+    width: 40%;
+    display: flex;
+    background-color: transparent;
+    padding-top: 1rem; /* <-- ADICIONADO */
+    border-bottom-width: 1px;
+    border-color: transparent;
+    padding-bottom: 1rem; /* pb-4 */
+    font-size: var(--font-size-body-md);
+    font-weight: 300; /* font-light */
+    color: var(--color-white);
+    caret-color: var(--color-red-500); /* Caret vermelho */
+  }
+  .search-input::placeholder {
+    color: var(--color-white);
+    opacity: 0.5; /* text-white/50 */
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: var(--color-blue-500); /* focus:border-blue-500 */
+  }
+}
