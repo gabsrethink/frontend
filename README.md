@@ -44,6 +44,8 @@ Link para o deploy: https://frontend-taupe-one-95.vercel.app/
 
 - Utilitários de Classe: class-variance-authority, clsx, tailwind-merge (para componentização com variantes no Tailwind)
 
+- Testes: Jest & React Testing Library
+
 - Deploy: Vercel
 
 ## Estrutura do Projeto
@@ -161,6 +163,44 @@ npm run dev
 ```
 
 A aplicação estará disponível em http://localhost:3001 (ou a porta indicada no terminal).
+
+## Testes Unitários
+
+O projeto inclui testes unitários básicos para garantir a qualidade e o comportamento esperado dos componentes e funções utilitárias.
+
+### Ferramentas Utilizadas:
+
+- Jest: Framework de testes JavaScript.
+
+- React Testing Library: Biblioteca para testar componentes React focando no comportamento do usuário.
+
+- ts-jest: Para executar testes escritos em TypeScript.
+
+- jest-environment-jsdom: Para simular um ambiente de navegador (DOM).
+
+### Componentes Testados:
+
+- Componente Icon (src/components/ui/Icon.test.tsx)
+
+- Componente Button (src/components/ui/Button.test.tsx)
+
+- Componente SearchBar (src/components/SearchBar.test.tsx)
+
+- Componente MovieCard (src/components/MovieCard.test.tsx)
+
+- Componente Navbar (src/components/Navbar.test.tsx)
+
+- Componente AuthRedirector (src/app/AuthRedirector.test.tsx)
+
+### Como Executar os Testes:
+```bash
+npm test
+```
+
+Este comando executará o Jest em modo "watch", re-executando os testes automaticamente ao salvar arquivos.
+
+### Cobertura de Testes:
+![Cobertura de Testes](image-6.png)
 
 ## Scripts Disponíveis
 
